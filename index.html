@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TODOアプリ</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="app">
+    <header class="app-header">
+      <h1 class="app-title">📝 TODOアプリ</h1>
+    </header>
+
+    <main class="app-main">
+
+      <!-- タスク入力エリア -->
+      <section class="task-form">
+        <label for="task-input" class="task-form__label">新しいタスク</label>
+        <div class="task-form__row">
+          <input
+            type="text"
+            id="task-input"
+            class="task-form__input"
+            placeholder="タスクを入力してください"
+          >
+          <button type="button" class="btn btn--primary task-form__button">追加</button>
+        </div>
+      </section>
+
+      <!-- タスク一覧エリア -->
+      <section class="task-list-section">
+        <h2 class="task-list-section__title">タスク一覧</h2>
+
+        <ul class="task-list">
+
+          <!-- 未完了タスク -->
+          <li class="task-item">
+            <label class="task-item__check-area">
+              <input type="checkbox" class="task-item__checkbox">
+              <span class="task-item__checkmark"></span>
+            </label>
+            <span class="task-item__text">HTMLの基礎を学ぶ</span>
+            <div class="task-item__actions">
+              <button type="button" class="btn btn--edit">編集</button>
+              <button type="button" class="btn btn--danger">削除</button>
+            </div>
+          </li>
+
+          <!-- 未完了タスク -->
+          <li class="task-item">
+            <label class="task-item__check-area">
+              <input type="checkbox" class="task-item__checkbox">
+              <span class="task-item__checkmark"></span>
+            </label>
+            <span class="task-item__text">CSSでレイアウトを組む</span>
+            <div class="task-item__actions">
+              <button type="button" class="btn btn--edit">編集</button>
+              <button type="button" class="btn btn--danger">削除</button>
+            </div>
+          </li>
+
+          <!-- 完了済みタスク -->
+          <li class="task-item is-completed">
+            <label class="task-item__check-area">
+              <input type="checkbox" class="task-item__checkbox" checked>
+              <span class="task-item__checkmark"></span>
+            </label>
+            <span class="task-item__text">開発環境をセットアップする</span>
+            <div class="task-item__actions">
+              <button type="button" class="btn btn--edit">編集</button>
+              <button type="button" class="btn btn--danger">削除</button>
+            </div>
+          </li>
+
+          <!-- 完了済みタスク -->
+          <li class="task-item is-completed">
+            <label class="task-item__check-area">
+              <input type="checkbox" class="task-item__checkbox" checked>
+              <span class="task-item__checkmark"></span>
+            </label>
+            <span class="task-item__text">Backlogの課題を確認する</span>
+            <div class="task-item__actions">
+              <button type="button" class="btn btn--edit">編集</button>
+              <button type="button" class="btn btn--danger">削除</button>
+            </div>
+          </li>
+
+        </ul>
+      </section>
+
+    </main>
+
+    <footer class="app-footer">
+      <p class="app-footer__text">4件中 2件完了</p>
+    </footer>
+  </div>
+
+</body>
+</html>
